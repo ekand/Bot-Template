@@ -131,4 +131,5 @@ dmypy.json
 .pyre/
 
 # logs
-/logs
+/logs/*
+!/logs/.exists

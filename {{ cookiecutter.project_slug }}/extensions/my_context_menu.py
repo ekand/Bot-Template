@@ -1,12 +1,12 @@
 from core.base import CustomClient
 
-from naff import CommandTypes, InteractionContext, Message, context_menu, Extension
+from interactions import CommandType, InteractionContext, Message, context_menu, Extension
 
 
 class ContextMenuExtension(Extension):
     bot: CustomClient
 
-    @context_menu(name="repeat", context_type=CommandTypes.MESSAGE)
+    @context_menu(name="repeat", context_type=CommandType.MESSAGE)
     async def my_context_menu(self, ctx: InteractionContext):
         """Repeat the message on which the context menu was used"""
 

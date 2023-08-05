@@ -1,13 +1,13 @@
 from core.base import CustomClient
 
-from naff import (
+from interactions import (
     Button,
-    ButtonStyles,
+    ButtonStyle,
     ComponentContext, Embed,
     Extension, InteractionContext,
     component_callback, slash_command,
 )
-
+# from interactions.something import ButtonStyles
 
 class CommandExtension(Extension):
     bot: CustomClient
@@ -18,7 +18,7 @@ class CommandExtension(Extension):
 
         # adds a component to the message
         components = Button(
-            style=ButtonStyles.GREEN,
+            style=ButtonStyle.GREEN,
             label="Hiya",
             custom_id="hello_world_button"
         )
@@ -38,6 +38,6 @@ class CommandExtension(Extension):
 
 
 def setup(bot: CustomClient):
-    """Let naff load the extension"""
+    """Let interactions load the extension"""
 
     CommandExtension(bot)

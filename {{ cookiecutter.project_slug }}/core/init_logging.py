@@ -3,7 +3,7 @@ import os
 import time
 from typing import Optional
 
-from naff import logger_name
+from interactions import logger_name
 
 
 class CustomLogger:
